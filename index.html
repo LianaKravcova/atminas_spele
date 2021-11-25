@@ -32,17 +32,78 @@
         </div><!--beidzas header-->
 
         <div class="content">
-            <p>Noteikumu teksts</p>
-            <div class="game">
-                <div class="block">😄</div>
-                <div class="block">🧐</div>
-                <div class="block">🤩</div>
-                <div class="block">🤩</div>
-                <div class="block">😄</div>
-                <div class="block">🧐</div>
-            </div>
+            <h3 class="virsraksts">Noteikumu teksts</h3>
+            Vārds : <input  id="vards" />
+            <br/>
+            Vecums : <input id="vecums" />
+            <br />
+            Reģions : 
+            <select id="regions">
+                <option value="Vidzeme">Vidzeme</option>
+                <option value="Kurzeme">Kurzeme</option>
+                <option value="Zemgale">Zemgale</option>
+                <option value="Latgale">Latgale</option>
+                <option value="Selija">Sēlija</option>
+            </select>
+            <button onclick="saktSpeli()">Sākt</button>
+            
         </div>
 
     </div><!--beidzas wrapper-->
+
+<!--šeit rakstu javascript, var nelikt ;, bet ir izņemumi-->
+<script>
+    function saktSpeli(){
+        let vards=document.querySelector('#vards').value;
+        let vecums=document.querySelector('#vecums').value;
+        let regions=document.querySelector('#regions').value;
+        console.log(vards);
+
+        if(vards==''|| vards==' '){
+            alert('Ievadi vārdu!');
+        }
+    }//funkcijas saktSpeli beigas
+
+
+
+
+
+/*let vards;
+const valsts = "Latvija";
+vards="Liāna";
+let punkti = 100;
+let vards2="Liāna\nKravcova";
+vards2+' : '+punkti+' Punkti';
+let klase=['Jānis', 'Laura', 'Jana'];
+klase[3]='Uģis';
+let skolens={ 
+    vards:"Jānis",
+    vecums:16,
+    'patīk datori':"jā"
+};
+skolens['vards'];
+
+
+let json=[
+    {vards:'Jānis',
+    vecums:17
+    },
+    {vards:'Linda',
+    vecums:16
+    },
+    {vards:'Jonuss',
+    vecums:16
+    }
+];
+//apskatīt īpašību kādā ierakstā
+json[1]['vecums'];
+
+console.log(vards);
+console.log('mainīsim lapas saturu');
+
+document.querySelector('.virsraksts').innerHTML="Vārds: "+vards;*/
+
+</script>
+
 </body>
 </html>
